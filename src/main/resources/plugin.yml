@@ -2,3 +2,9 @@ name: HuskPyramid
 version: '${version}'
 main: me.lucthesloth.domhusks.HuskPyramid
 api-version: 1.19
+commands:
+  reloadhuskpyramid:
+    description: Reloads the HuskPyramid config
+    usage: /<command>
+    permission: huskpyramid.reload
+    aliases: [reloadhp]
