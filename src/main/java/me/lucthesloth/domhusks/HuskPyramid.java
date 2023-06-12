@@ -15,6 +15,7 @@ public final class HuskPyramid extends JavaPlugin {
         // Plugin startup logic
         populateList();
         Bukkit.getPluginManager().registerEvents(new EntityListener(), this);
+        Objects.requireNonNull(getCommand("reloadhuskpyramid")).setExecutor(new ReloadCommand());
         instance = this;
     }
 
