@@ -1,0 +1,4 @@
+name: HuskPyramid
+version: '${version}'
+main: me.lucthesloth.domhusks.HuskPyramid
+api-version: 1.19
