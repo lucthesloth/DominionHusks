@@ -1,6 +1,6 @@
 name: WitchHuts
 version: '${version}'
-main: me.lucthesloth.domhusks.HuskPyramid
+main: me.lucthesloth.witchhuts.WitchHuts
 api-version: 1.19
 commands:
   reloadwitchhuts:

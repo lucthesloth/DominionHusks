@@ -1,4 +1,4 @@
-package me.lucthesloth.domhusks;
+package me.lucthesloth.witchhuts;
 
 import org.bukkit.Location;
 import org.bukkit.World;

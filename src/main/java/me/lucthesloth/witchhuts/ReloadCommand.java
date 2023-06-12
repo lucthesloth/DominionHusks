@@ -1,4 +1,4 @@
-package me.lucthesloth.domhusks;
+package me.lucthesloth.witchhuts;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
