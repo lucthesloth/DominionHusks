@@ -20,9 +20,6 @@ public class EntityListener implements Listener {
             !(event.getEntity() instanceof Monster) ||
             event.getLocation().getWorld().getEnvironment() != World.Environment.NORMAL) return;
 
-        oldCode(event);
-    }
-    public void oldCode(CreatureSpawnEvent event) {
         //Old code
         EntityType entityType = event.getEntityType();
         Location location = event.getLocation();
@@ -43,6 +40,7 @@ public class EntityListener implements Listener {
         if (location.getY() >= 50.0D && location.getY() <= 80.0D && Math.abs(structureX - location.getX() + 11.0D) < 12.0D && Math.abs(structureZ - location.getZ() + 11.0D) < 12.0D) {
             location.getWorld().spawnEntity(location, EntityType.HUSK);
             event.setCancelled(true);
-        }
+        };
     }
+
 }

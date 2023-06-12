@@ -7,8 +7,6 @@ import org.bukkit.util.BoundingBox;
 import java.util.*;
 
 public final class HuskPyramid extends JavaPlugin {
-    public ArrayList<BoundingBox> pyramidBoundingBoxes = new ArrayList<>();
-    public boolean old = false;
     public static HuskPyramid instance;
     @Override
     public void onEnable() {
