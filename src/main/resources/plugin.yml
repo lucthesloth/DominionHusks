@@ -1,10 +1,10 @@
-name: HuskPyramid
+name: WitchHuts
 version: '${version}'
 main: me.lucthesloth.domhusks.HuskPyramid
 api-version: 1.19
 commands:
-  reloadhuskpyramid:
+  reloadwitchhuts:
     description: Reloads the HuskPyramid config
     usage: /<command>
-    permission: huskpyramid.reload
-    aliases: [reloadhp]
+    permission: witchhuts.reload
+    aliases: [reloadwh]

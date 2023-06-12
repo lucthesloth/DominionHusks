@@ -18,8 +18,8 @@ public class EntityListener implements Listener {
             event.getLocation().getWorld().getEnvironment() != World.Environment.NORMAL) return;
 
         Location location = event.getLocation();
-        if (HuskPyramid.instance.pyramidBoundingBoxes.stream().anyMatch(box -> box.contains(location.toVector()))){
-            location.getWorld().spawnEntity(location, EntityType.HUSK);
+        if (WitchHuts.instance.hutsBoundingBoxes.stream().anyMatch(box -> box.contains(location.toVector()))){
+            location.getWorld().spawnEntity(location, EntityType.WITCH);
             event.setCancelled(true);
         }
     }

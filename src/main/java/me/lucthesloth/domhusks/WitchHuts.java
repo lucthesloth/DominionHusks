@@ -6,16 +6,16 @@ import org.bukkit.util.BoundingBox;
 
 import java.util.*;
 
-public final class HuskPyramid extends JavaPlugin {
-    public ArrayList<BoundingBox> pyramidBoundingBoxes = new ArrayList<>();
-    public static HuskPyramid instance;
+public final class WitchHuts extends JavaPlugin {
+    public ArrayList<BoundingBox> hutsBoundingBoxes = new ArrayList<>();
+    public static WitchHuts instance;
     @Override
     public void onEnable() {
         saveDefaultConfig();
         // Plugin startup logic
         populateList();
         Bukkit.getPluginManager().registerEvents(new EntityListener(), this);
-        Objects.requireNonNull(getCommand("reloadhuskpyramid")).setExecutor(new ReloadCommand());
+        Objects.requireNonNull(getCommand("reloadwitchhuts")).setExecutor(new ReloadCommand());
         instance = this;
     }
 
@@ -27,6 +27,6 @@ public final class HuskPyramid extends JavaPlugin {
     public void populateList() {
         List<List<Integer>> list = (List<List<Integer>>) getConfig().getList("pyramids", Collections.emptyList());
         for (List<Integer> location : list)
-            this.pyramidBoundingBoxes.add(new BoundingBox(location.get(0), 50.0D, location.get(1), location.get(0) + 21.0D, 80.0D, location.get(1) + 21.0D));
+            this.hutsBoundingBoxes.add(new BoundingBox(location.get(0), location.get(1), location.get(2), location.get(0) + 7.0D, location.get(1)+9, location.get(2) + 5.0D));
     }
 }
