@@ -27,6 +27,6 @@ public final class WitchHuts extends JavaPlugin {
     public void populateList() {
         List<List<Integer>> list = (List<List<Integer>>) getConfig().getList("huts", Collections.emptyList());
         for (List<Integer> location : list)
-            this.hutsBoundingBoxes.add(new BoundingBox(location.get(0), 64, location.get(2), location.get(0) + 7.0D, 73, location.get(2) + 5.0D));
+            this.hutsBoundingBoxes.add(new BoundingBox(location.get(0), 64, location.get(1), location.get(0) + 7.0D, 73, location.get(1) + 5.0D));
     }
 }
