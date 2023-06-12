@@ -31,7 +31,7 @@ public class EntityListener implements Listener {
         //Removed specific entity type check in favor of checking only for monsters
         //There were only 2 possible cases of an entity not being valid: Enderman and Drowneds, which
         //Would not spawn inside a husk farm in any case
-        if (biome == Biome.DESERT)
+        if (biome == Biome.DESERT || biome == Biome.RIVER)
             result = location.getWorld().locateNearestStructure(location, StructureType.DESERT_PYRAMID, 25, false);
         if (result != null) {
             structureZ = result.getLocation().getZ();
