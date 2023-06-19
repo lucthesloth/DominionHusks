@@ -5,6 +5,5 @@ api-version: 1.19
 commands:
   reloadhuskpyramid:
     description: Reloads the HuskPyramid config
-    usage: /<command>
     permission: huskpyramid.reload
     aliases: [reloadhp]
