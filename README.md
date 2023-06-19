@@ -32,6 +32,8 @@ Reloads configuration from disk and rebuilds cache of huts.
 
 `git clone https://github.com/lucthesloth/DominionHusks.git`
 
+`git checkout WitchHuts`
+
 `gradlew build`
 
 The output will be in `build/libs`
