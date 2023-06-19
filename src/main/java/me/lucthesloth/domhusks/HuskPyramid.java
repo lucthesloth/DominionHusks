@@ -27,6 +27,6 @@ public final class HuskPyramid extends JavaPlugin {
     public void populateList() {
         List<List<Integer>> list = (List<List<Integer>>) getConfig().getList("pyramids", Collections.emptyList());
         for (List<Integer> location : list)
-            this.pyramidBoundingBoxes.add(new BoundingBox(location.get(0), 50.0D, location.get(1), location.get(0) + 21.0D, 80.0D, location.get(1) + 21.0D));
+            this.pyramidBoundingBoxes.add(new BoundingBox(location.get(0)-1, 49.0D, location.get(1)-1, location.get(0) + 22.0D, 81.0D, location.get(1) + 22.0D));
     }
 }
