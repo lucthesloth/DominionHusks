@@ -8,12 +8,13 @@ import java.util.*;
 
 public final class WitchHuts extends JavaPlugin {
     public ArrayList<BoundingBox> hutsBoundingBoxes = new ArrayList<>();
+    public int xSize,zSize,ySize,baseHeight;
     public static WitchHuts instance;
     @Override
     public void onEnable() {
         saveDefaultConfig();
         // Plugin startup logic
-        populateList();
+        RefreshConfig();
         Bukkit.getPluginManager().registerEvents(new EntityListener(), this);
         Objects.requireNonNull(getCommand("reloadwitchhuts")).setExecutor(new ReloadCommand());
         instance = this;
@@ -24,9 +25,13 @@ public final class WitchHuts extends JavaPlugin {
         // Plugin shutdown logic
     }
 
-    public void populateList() {
+    public void RefreshConfig() {
+        this.xSize = getConfig().getInt("xSize", 7);
+        this.zSize = getConfig().getInt("zSize", 5);
+        this.ySize = getConfig().getInt("ySize", 7);
+        this.baseHeight = getConfig().getInt("yStart", 64);
         List<List<Integer>> list = (List<List<Integer>>) getConfig().getList("huts", Collections.emptyList());
         for (List<Integer> location : list)
-            this.hutsBoundingBoxes.add(new BoundingBox(location.get(0), 64, location.get(1), location.get(0) + 7.0D, 73, location.get(1) + 5.0D));
+            this.hutsBoundingBoxes.add(new BoundingBox(location.get(0)-1, baseHeight-1, location.get(1) - 1, location.get(0) + xSize + 1, baseHeight + ySize + 1, location.get(1) + zSize + 1));
     }
 }

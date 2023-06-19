@@ -1,1 +1,12 @@
+# List of witch huts to watch out for
 huts: []
+
+# Bounding Box X size, default is 7
+xSize: 7
+# Bounding Box Z size, default is 5
+zSize: 5
+# Bounding Box height, default is 7
+ySize: 7
+
+# Bounding box starting Y level, default is 64
+yStart: 64

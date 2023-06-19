@@ -11,8 +11,8 @@ public class ReloadCommand implements CommandExecutor {
         if (sender.hasPermission("witchhuts.reload")) {
             WitchHuts.instance.reloadConfig();
             WitchHuts.instance.hutsBoundingBoxes.clear();
-            WitchHuts.instance.populateList();
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&aReloaded WitchHuts config."));
+            WitchHuts.instance.RefreshConfig();
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&aReloaded WitchHuts config. &e" + (WitchHuts.instance.hutsBoundingBoxes.size() > 0 ? " &c" + WitchHuts.instance.hutsBoundingBoxes.size() + " huts loaded." : "")));
             return true;
         }
         return false;
