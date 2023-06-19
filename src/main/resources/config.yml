@@ -1,2 +1,5 @@
 # List containing all Desert Temples you want the plugin to act on
 pyramids: []
+
+# If turned on, the plugin will check for the nearest desert temple as well as using the list
+nearestcheck: false

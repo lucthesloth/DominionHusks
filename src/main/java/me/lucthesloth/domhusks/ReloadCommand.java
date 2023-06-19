@@ -11,7 +11,7 @@ public class ReloadCommand implements CommandExecutor {
         if (sender.hasPermission("huskpyramid.reload")) {
             HuskPyramid.instance.reloadConfig();
             HuskPyramid.instance.pyramidBoundingBoxes.clear();
-            HuskPyramid.instance.populateList();
+            HuskPyramid.instance.refreshConfiguration();
             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&aReloaded config and bounding boxes. &7(&e" + HuskPyramid.instance.pyramidBoundingBoxes.size() + " &7Pyramid bound boxes&7)"));
             return true;
         }
