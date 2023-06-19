@@ -17,7 +17,7 @@ public class EntityListener implements Listener {
         if (event.getSpawnReason() != CreatureSpawnEvent.SpawnReason.NATURAL ||
             !(event.getEntity() instanceof Monster) ||
             event.getLocation().getWorld().getEnvironment() != World.Environment.NORMAL ||
-            event.getLocation().getBlock().getBiome() == Biome.SWAMP) return;
+            event.getLocation().getBlock().getBiome() != Biome.SWAMP) return;
 
         Location location = event.getLocation();
         if (location.getBlockY() < WitchHuts.instance.baseHeight - 1 || location.getBlockY() > WitchHuts.instance.baseHeight + WitchHuts.instance.ySize + 1) return;
