@@ -24,7 +24,7 @@ public class EntityListener implements Listener {
         if (location.getBlockY() <= 49 || location.getBlockY() >= 81) return;
 
         // Old Code compatibility. In case it's turned on in config
-        if (HuskPyramid.instance.oldCode && location.getBlock().getBiome() == Biome.DESERT || location.getBlock().getBiome() == Biome.RIVER) {
+        if (HuskPyramid.instance.oldCode && (location.getBlock().getBiome() == Biome.DESERT || location.getBlock().getBiome() == Biome.RIVER)) {
             StructureSearchResult result = location.getWorld().locateNearestStructure(location, StructureType.DESERT_PYRAMID, 32, false);
             if (result != null && location.getBlockX() >= result.getLocation().getBlockX() && location.getBlockX() <= result.getLocation().getBlockX() + 22 &&
                 location.getBlockZ() >= result.getLocation().getBlockZ() && location.getBlockZ() <= result.getLocation().getBlockZ() + 22){
