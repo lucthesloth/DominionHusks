@@ -1,6 +1,7 @@
 name: HuskPyramid
 version: '${version}'
 main: me.lucthesloth.domhusks.HuskPyramid
+author: Lucthesloth
 api-version: 1.19
 commands:
   reloadhuskpyramid:
