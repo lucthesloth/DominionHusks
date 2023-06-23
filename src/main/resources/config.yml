@@ -3,8 +3,8 @@ huts: []
 
 # Bounding Box X size, default is 7
 xSize: 7
-# Bounding Box Z size, default is 5
-zSize: 5
+# Bounding Box Z size, default is 9
+zSize: 9
 # Bounding Box height, default is 7
 ySize: 7
 
